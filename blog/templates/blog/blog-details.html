@@ -1,5 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block title %} Blog Details {%
-endblock %} {% block content %} {% block extrahead %}
+{% extends "base.html" %} {% load static %} {% block title %} Blog Details {%endblock %} {% block content %}
 
 <div class="container mt-3">
   <div class="row">
@@ -13,7 +12,7 @@ endblock %} {% block content %} {% block extrahead %}
           <div class="col-md-9">
             <div class="card-body">
               <h5 class="card-title">{{ blog.title }}</h5>
-              <p class="card-text">{{ blog.description }}</p>
+              <p class="card-text">{{ blog.description|safe }}</p>
             </div>
           </div>
         </div>
