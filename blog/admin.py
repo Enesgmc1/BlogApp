@@ -7,7 +7,8 @@ class BlogAdmin(admin.ModelAdmin):
     list_editable = ("is_active","is_home")
     search_fields = ("title","description")
     readonly_fields = ("slug",)
-      # readonly_fields = ("description")
+    list_filter = ("is_active","is_home",)
+    
 
 
 
